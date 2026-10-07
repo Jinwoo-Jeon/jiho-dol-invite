@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&display=block" rel="stylesheet">
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" crossorigin="anonymous" defer></script>
 <style>
 :root {
   --bg: #EDD6D0;
@@ -591,7 +592,7 @@ footer .share button {
   <footer class="reveal">
     <p class="crayon-line">한 살이 되는 날,<br>지호의 처음을 함께해 주세요</p>
     <div class="share">
-      <button type="button" id="share-btn">초대장 전하기</button>
+      <button type="button" id="share-btn">카카오톡으로 초대장 전하기</button>
       <button type="button" id="copy-btn">초대장 주소 복사하기</button>
     </div>
   </footer>
@@ -780,15 +781,36 @@ function toast(msg) {
 })();
 
 // ---------- 공유 ----------
+var SITE_URL = 'https://jinwoo-jeon.github.io/jiho-dol-invite/';
 document.getElementById('share-btn').addEventListener('click', function () {
+  // 1순위: 카카오톡 공유 (인앱 브라우저 포함 어디서나 동작)
+  if (window.Kakao) {
+    try {
+      if (!Kakao.isInitialized()) Kakao.init('f346d069580911bb7cba844040466c59');
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '지호의 첫 생일에 초대합니다',
+          description: '2026년 10월 25일 일요일 오전 11시 30분\n서라벌한정식 서초 본점',
+          imageUrl: SITE_URL + 'images/03.jpg',
+          link: { mobileWebUrl: SITE_URL, webUrl: SITE_URL }
+        },
+        buttons: [
+          { title: '초대장 보기', link: { mobileWebUrl: SITE_URL, webUrl: SITE_URL } }
+        ]
+      });
+      return;
+    } catch (e) { /* SDK 실패 시 아래 폴백 */ }
+  }
+  // 2순위: 브라우저 공유 시트
   if (navigator.share) {
-    navigator.share({ title: '지호의 첫 생일에 초대합니다', url: location.href }).catch(function () {});
+    navigator.share({ title: '지호의 첫 생일에 초대합니다', url: SITE_URL }).catch(function () {});
   } else {
-    navigator.clipboard.writeText(location.href).then(function () { toast('초대장 주소를 복사했어요'); });
+    navigator.clipboard.writeText(SITE_URL).then(function () { toast('초대장 주소를 복사했어요'); });
   }
 });
 document.getElementById('copy-btn').addEventListener('click', function () {
-  navigator.clipboard.writeText(location.href).then(function () { toast('초대장 주소를 복사했어요'); });
+  navigator.clipboard.writeText(SITE_URL).then(function () { toast('초대장 주소를 복사했어요'); });
 });
 
 // ---------- 스크롤 등장 ----------
