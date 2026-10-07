@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>지호의 첫 생일에 초대합니다</title>
+<meta property="og:title" content="지호의 첫 생일에 초대합니다">
+<meta property="og:description" content="2026년 10월 25일 일요일 오전 11시 30분 · 서라벌한정식 서초 본점">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&display=block" rel="stylesheet">
+<style>
+:root {
+  --bg: #EDD6D0;
+  --paper: #FFFFFF;
+  --paper-soft: #FAF6F4;
+  --pink: #F7E8E4;
+  --pink-block: #E7C6C0;
+  --rose: #CE8F89;
+  --rose-deep: #BC7069;
+  --ink: #3E3733;
+  --sub: #A39A94;
+  --hairline: #F0E4E0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Gowun Dodum', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  line-height: 1.8;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.crayon { font-family: 'Gaegu', 'Gowun Dodum', cursive; }
+.card {
+  width: 100%;
+  max-width: 430px;
+  background: var(--paper);
+  min-height: 100vh;
+  box-shadow: 0 0 44px rgba(62,55,51,.15);
+  overflow: hidden;
+}
+section { padding: 76px 30px; text-align: center; }
+.sec-title {
+  font-family: 'Gaegu', cursive;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-indent: .22em;
+  color: var(--ink);
+  margin-bottom: 36px;
+}
+
+/* ---------- 인트로 ---------- */
+.hero {
+  position: relative;
+  height: 100svh;
+  min-height: 560px;
+  max-height: 860px;
+  background: url('images/03.jpg') center 42% / cover no-repeat, var(--pink-block);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 72px 28px 60px;
+  color: #FFFDFB;
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(62,55,51,.3), rgba(62,55,51,0) 34%, rgba(62,55,51,0) 58%, rgba(62,55,51,.42));
+}
+.hero > * { position: relative; }
+.hero .eyebrow {
+  font-family: 'Gaegu', cursive;
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: .38em;
+  text-indent: .38em;
+  line-height: 1.55;
+  text-shadow: 0 1px 10px rgba(62,55,51,.3);
+}
+.hero .bottom {
+  font-size: 14.5px;
+  line-height: 2.05;
+  letter-spacing: .05em;
+  text-shadow: 0 1px 8px rgba(62,55,51,.38);
+}
+
+/* ---------- 인사말 ---------- */
+.greeting { padding-top: 90px; padding-bottom: 90px; }
+.greeting .heart { margin-bottom: 44px; }
+.greeting p {
+  font-family: 'Gaegu', cursive;
+  font-size: 19px;
+  line-height: 2.15;
+  text-wrap: balance;
+}
+.greeting .parents {
+  margin-top: 52px;
+  font-family: 'Gaegu', cursive;
+  font-size: 19px;
+}
+
+/* ---------- 전환 사진 + 날짜 블록 ---------- */
+.break-photo { display: block; width: 100%; }
+.interlude {
+  background: var(--pink-block);
+  color: #FFF8F5;
+  padding: 110px 30px 120px;
+  text-align: center;
+}
+.interlude .m {
+  font-family: 'Gaegu', cursive;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1.05;
+  opacity: .96;
+}
+.interlude .y {
+  font-family: 'Gaegu', cursive;
+  font-size: 44px;
+  letter-spacing: .34em;
+  text-indent: .34em;
+  opacity: .8;
+  margin-top: 10px;
+}
+
+/* ---------- PARTY DAY ---------- */
+.party { padding-top: 84px; }
+.party .date-ko { font-family: 'Gaegu', cursive; font-size: 19px; }
+.party .date-en { font-size: 12px; color: var(--sub); letter-spacing: .04em; margin-top: 2px; margin-bottom: 44px; }
+.calendar {
+  width: 100%; max-width: 300px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-family: 'Gaegu', cursive;
+}
+.calendar th {
+  font-size: 15px; font-weight: 400; color: var(--ink);
+  padding-bottom: 14px;
+}
+.calendar th:first-child, .calendar td:first-child { color: var(--rose-deep); }
+.calendar td { padding: 8px 0; font-size: 16px; }
+.calendar td.the-day { position: relative; z-index: 0; color: #fff; font-weight: 700; }
+.calendar td.the-day::before {
+  content: "";
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  width: 34px; height: 34px;
+  background: var(--rose);
+  border-radius: 52% 48% 50% 50% / 48% 52% 48% 52%;
+  z-index: -1;
+}
+.countdown {
+  margin-top: 52px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.countdown .unit {
+  width: 74px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(62,55,51,.1);
+  padding: 16px 0 13px;
+}
+.countdown .num {
+  font-family: 'Gaegu', cursive;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.countdown .lab { font-size: 9.5px; letter-spacing: .12em; color: var(--sub); margin-top: 7px; }
+.dday-line {
+  margin-top: 40px;
+  font-family: 'Gaegu', cursive;
+  font-size: 19px;
+}
+.dday-line .heart { color: var(--rose); }
+.dday-line b { color: var(--rose-deep); font-weight: 700; }
+
+/* ---------- 가족 ---------- */
+.family { background: var(--pink); padding-top: 84px; padding-bottom: 84px; }
+.family .photo-wrap {
+  position: relative;
+  width: 185px; height: 185px;
+  margin: 0 auto 30px;
+}
+.family .photo-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.family .photo-wrap svg.crown {
+  position: absolute;
+  top: -16px; left: 2px;
+  transform: rotate(-18deg);
+}
+.family .badge {
+  display: inline-block;
+  background: var(--rose);
+  color: #fff;
+  font-family: 'Gaegu', cursive;
+  font-size: 15px;
+  letter-spacing: .3em;
+  text-indent: .3em;
+  border-radius: 999px;
+  padding: 5px 20px;
+  margin-bottom: 18px;
+}
+.family .baby-name { font-family: 'Gaegu', cursive; font-size: 26px; font-weight: 700; }
+.family .baby-sub { font-size: 11.5px; color: var(--sub); letter-spacing: .3em; text-indent: .3em; margin-top: 4px; margin-bottom: 34px; }
+.family .pair {
+  font-family: 'Gaegu', cursive;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 14px;
+}
+.family .pair .role { color: var(--rose-deep); margin-right: 7px; }
+.family .pair .sep { color: var(--rose); font-size: 15px; }
+/* ---------- GALLERY ---------- */
+.gallery { padding-left: 0; padding-right: 0; }
+.gallery .hint { font-size: 12.5px; color: var(--sub); margin-top: -26px; margin-bottom: 34px; }
+.carousel {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 56px 10px;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar { display: none; }
+.carousel .slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  border: 0; padding: 0;
+  background: none;
+  cursor: pointer;
+}
+.carousel .slide img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  box-shadow: 0 6px 20px rgba(62,55,51,.14);
+}
+.gallery .nav-row {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+}
+.gallery .nav-row button {
+  border: 0; background: none;
+  font-size: 22px;
+  color: var(--sub);
+  cursor: pointer;
+  padding: 4px 10px;
+  font-family: inherit;
+}
+.gallery .counter { font-size: 14px; letter-spacing: .14em; font-variant-numeric: tabular-nums; }
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(42,35,32,.94);
+  display: none;
+  align-items: center; justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 50;
+  padding: 24px;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 94vw;
+  max-height: 74vh;
+  display: block;
+  border-radius: 8px;
+}
+.lightbox .nav { color: #FFFDFB; font-size: 13px; letter-spacing: .2em; font-variant-numeric: tabular-nums; }
+.lightbox .close {
+  position: absolute; top: 18px; right: 22px;
+  background: none; border: 0;
+  color: #FFFDFB; font-size: 30px; cursor: pointer;
+  font-family: inherit;
+}
+
+/* ---------- LOCATION ---------- */
+.location { padding-top: 84px; padding-bottom: 84px; }
+.location .venue-name { font-size: 17.5px; font-weight: 700; }
+.location .venue-addr { font-size: 14px; color: var(--sub); margin-top: 6px; }
+.location .venue-tel { margin-top: 4px; font-size: 13.5px; }
+.location .venue-tel a { color: var(--rose-deep); text-decoration: none; }
+#map {
+  margin-top: 28px;
+  width: 100%;
+  height: 280px;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(62,55,51,.1);
+}
+.map-btns { margin-top: 26px; display: flex; justify-content: center; gap: 10px; }
+.map-btns a {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(62,55,51,.07);
+  padding: 10px 20px;
+  font-size: 13.5px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.transit {
+  margin-top: 44px;
+  text-align: left;
+  background: var(--paper-soft);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  padding: 10px 24px;
+}
+.transit .row { padding: 20px 0; }
+.transit .row + .row { border-top: 1px solid var(--hairline); }
+.transit .how {
+  font-family: 'Gaegu', cursive;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--rose-deep);
+  margin-bottom: 4px;
+}
+.transit p { font-size: 14px; line-height: 2; }
+.transit p .sub { color: var(--sub); font-size: 13px; }
+
+/* ---------- 푸터 ---------- */
+footer {
+  background: var(--pink-block);
+  color: #FFF8F5;
+  text-align: center;
+  padding: 80px 30px 88px;
+}
+footer .crayon-line {
+  font-family: 'Gaegu', cursive;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.75;
+}
+footer .share { margin-top: 40px; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+footer .share button {
+  width: 100%; max-width: 280px;
+  border: 0;
+  border-radius: 999px;
+  background: #FFFDFB;
+  color: var(--rose-deep);
+  font-family: 'Gaegu', cursive;
+  font-size: 18px;
+  padding: 13px 0;
+  cursor: pointer;
+}
+
+/* ---------- 모션 ---------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s ease, transform .9s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+#toast {
+  position: fixed;
+  left: 50%; bottom: 34px;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--ink);
+  color: #FFFDFB;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+  pointer-events: none;
+  z-index: 60;
+}
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- ① 인트로 -->
+  <div class="hero">
+    <p class="eyebrow">FIRST<br>BIRTHDAY</p>
+    <div class="bottom">
+      2026년 10월 25일 일요일 오전 11시 30분<br>
+      서라벌한정식 서초 본점
+    </div>
+  </div>
+
+  <!-- ② 인사말 -->
+  <section class="greeting reveal">
+    <div class="heart">
+      <svg width="54" height="50" viewBox="0 0 54 50" fill="none" aria-hidden="true">
+        <path d="M27 44C20 37 7 29 5 18 3.5 9 10 4 16 5c5 .8 9 4.5 11 8 2-3.5 6-7.2 11-8 6-1 12.5 4 11 13-2 11-15 19-22 26z" fill="#CE8F89"/>
+        <path d="M14 13c-2.5 1.5-4 4-3.6 7" stroke="#FFF8F5" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <p>
+      일 년 전, 저희에게 온<br>
+      가장 작고 귀한 선물 지호.<br>
+      <br>
+      울음보다 웃음이 많아지고<br>
+      이제는 제 발로 서는 모습에<br>
+      하루하루가 고맙습니다.<br>
+      <br>
+      지호의 첫 번째 생일,<br>
+      귀한 걸음으로 축복해 주세요.
+    </p>
+    <p class="parents">아빠 전진우 · 엄마 김발해</p>
+  </section>
+
+  <!-- ③ 전환 사진 + 날짜 -->
+  <img class="break-photo" src="images/04.jpg" alt="엄마 아빠 손을 잡고 웃는 지호" loading="lazy">
+  <div class="interlude reveal">
+    <p class="m">Oct 25</p>
+    <p class="y">2026</p>
+  </div>
+
+  <!-- ④ PARTY DAY -->
+  <section class="party reveal">
+    <h2 class="sec-title">PARTY DAY</h2>
+    <p class="date-ko">2026년 10월 25일 일요일 | 오전 11시 30분</p>
+    <p class="date-en">Sunday, October 25, 2026 | AM 11:30</p>
+    <table class="calendar">
+      <thead>
+        <tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+        <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+        <tr><td class="the-day">25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+      </tbody>
+    </table>
+    <div class="countdown" aria-live="off">
+      <div class="unit"><div class="num" id="cd-d">0</div><div class="lab">DAYS</div></div>
+      <div class="unit"><div class="num" id="cd-h">0</div><div class="lab">HOURS</div></div>
+      <div class="unit"><div class="num" id="cd-m">0</div><div class="lab">MINUTES</div></div>
+      <div class="unit"><div class="num" id="cd-s">0</div><div class="lab">SECONDS</div></div>
+    </div>
+    <p class="dday-line" id="dday-line">지호 첫 생일 <span class="heart">&#10084;</span> <b>-</b></p>
+  </section>
+
+  <!-- ⑤ 가족 -->
+  <section class="family reveal">
+    <div class="photo-wrap">
+      <svg class="crown" width="46" height="38" viewBox="0 0 46 38" fill="none" aria-hidden="true">
+        <path d="M6 30L3 10l11 7 9-13 9 13 11-7-3 20z" fill="#E8B64C"/>
+      </svg>
+      <img src="images/16.jpg" alt="웃고 있는 지호">
+    </div>
+    <span class="badge">아기</span>
+    <p class="baby-name">지호</p>
+    <p class="baby-sub">JEON JIHO</p>
+    <p class="pair">
+      <span><span class="role">아빠</span>전진우</span>
+      <span class="sep">|</span>
+      <span><span class="role">엄마</span>김발해</span>
+    </p>
+  </section>
+
+  <!-- ⑥ GALLERY -->
+  <section class="gallery reveal">
+    <h2 class="sec-title">GALLERY</h2>
+    <p class="hint">사진을 클릭하시면 전체 화면 보기가 가능합니다</p>
+    <div class="carousel" id="carousel">
+      <button class="slide" type="button"><img src="images/01.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/02.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/12.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/05.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/06.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/07.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/08.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/09.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/10.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/11.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/13.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/14.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/15.jpg" alt="" loading="lazy"></button>
+      <button class="slide" type="button"><img src="images/16.jpg" alt="" loading="lazy"></button>
+    </div>
+    <div class="nav-row">
+      <button type="button" id="prev" aria-label="이전 사진">&lsaquo;</button>
+      <span class="counter" id="counter">1 / 14</span>
+      <button type="button" id="next" aria-label="다음 사진">&rsaquo;</button>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="사진 크게 보기">
+    <button class="close" id="lb-close" aria-label="닫기">&times;</button>
+    <img id="lb-img" src="images/01.jpg" alt="">
+    <p class="nav" id="lb-nav">1 / 14</p>
+  </div>
+
+  <!-- ⑦ LOCATION -->
+  <section class="location reveal">
+    <h2 class="sec-title">LOCATION</h2>
+    <p class="venue-name">서라벌한정식 서초 본점</p>
+    <p class="venue-addr">서울 서초구 법원로3길 6-9</p>
+    <p class="venue-tel"><a href="tel:02-599-5288">02-599-5288</a></p>
+    <div id="map" hidden></div>
+    <div class="map-btns">
+      <a href="https://map.kakao.com/?q=%EC%84%9C%EB%9D%BC%EB%B2%8C%ED%95%9C%EC%A0%95%EC%8B%9D%20%EC%84%9C%EC%B4%88%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener">카카오맵 열기</a>
+      <a href="https://map.naver.com/p/search/%EC%84%9C%EB%9D%BC%EB%B2%8C%ED%95%9C%EC%A0%95%EC%8B%9D%20%EC%84%9C%EC%B4%88%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener">네이버지도 열기</a>
+    </div>
+    <div class="transit">
+      <div class="row">
+        <p class="how">지하철</p>
+        <p>2호선 서초역 7번 출구 &rarr; 도보 3분<br>
+        <span class="sub">법원로3길 골목 안쪽에 있어요</span></p>
+      </div>
+      <div class="row">
+        <p class="how">자차 · 주차</p>
+        <p>내비게이션 &lsquo;서라벌한정식 서초본점&rsquo; 검색<br>
+        <span class="sub">주차 가능</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ 마무리 · 공유 -->
+  <footer class="reveal">
+    <p class="crayon-line">한 살이 되는 날,<br>지호의 처음을 함께해 주세요</p>
+    <div class="share">
+      <button type="button" id="share-btn">초대장 전하기</button>
+      <button type="button" id="copy-btn">초대장 주소 복사하기</button>
+    </div>
+  </footer>
+
+</div>
+
+<div id="toast" role="status"></div>
+
+<script>
+// ---------- 카운트다운 ----------
+(function () {
+  var target = new Date(2026, 9, 25, 11, 30, 0);
+  var dEl = document.getElementById('cd-d'),
+      hEl = document.getElementById('cd-h'),
+      mEl = document.getElementById('cd-m'),
+      sEl = document.getElementById('cd-s'),
+      line = document.getElementById('dday-line');
+  function tick() {
+    var now = new Date(), diff = target - now;
+    if (diff <= 0) {
+      dEl.textContent = hEl.textContent = mEl.textContent = sEl.textContent = '0';
+      line.innerHTML = '오늘은 <b>지호의 첫 생일</b>입니다 🎂';
+      return;
+    }
+    var s = Math.floor(diff / 1000);
+    dEl.textContent = Math.floor(s / 86400);
+    hEl.textContent = Math.floor(s % 86400 / 3600);
+    mEl.textContent = Math.floor(s % 3600 / 60);
+    sEl.textContent = s % 60;
+    var dayLeft = Math.ceil((new Date(2026, 9, 25) - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+    line.innerHTML = '지호 첫 생일 <span class="heart">&#10084;</span> <b>' + dayLeft + '일</b> 남았습니다';
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+
+// ---------- 갤러리 캐러셀 ----------
+(function () {
+  var car = document.getElementById('carousel');
+  var slides = Array.prototype.slice.call(car.querySelectorAll('.slide'));
+  var counter = document.getElementById('counter');
+  var cur = 0;
+  function slideWidth() { return slides[0].offsetWidth + 14; }
+  function goTo(i) {
+    cur = Math.max(0, Math.min(slides.length - 1, i));
+    car.scrollTo({ left: cur * slideWidth(), behavior: 'smooth' });
+  }
+  car.addEventListener('scroll', function () {
+    var i = Math.round(car.scrollLeft / slideWidth());
+    if (i !== cur && i >= 0 && i < slides.length) {
+      cur = i;
+      counter.textContent = (cur + 1) + ' / ' + slides.length;
+    }
+  }, { passive: true });
+  document.getElementById('prev').addEventListener('click', function () { goTo(cur - 1); });
+  document.getElementById('next').addEventListener('click', function () { goTo(cur + 1); });
+
+  // 라이트박스
+  var lb = document.getElementById('lightbox'),
+      img = document.getElementById('lb-img'),
+      nav = document.getElementById('lb-nav'),
+      idx = 0;
+  var srcs = slides.map(function (s) { return s.querySelector('img').src; });
+  function show(i) {
+    idx = (i + srcs.length) % srcs.length;
+    img.src = srcs[idx];
+    nav.textContent = (idx + 1) + ' / ' + srcs.length;
+  }
+  slides.forEach(function (s, i) {
+    s.addEventListener('click', function () { show(i); lb.classList.add('open'); });
+  });
+  document.getElementById('lb-close').addEventListener('click', function () { lb.classList.remove('open'); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) lb.classList.remove('open'); });
+  var sx = null;
+  lb.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', function (e) {
+    if (sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 40) show(idx + (dx < 0 ? 1 : -1));
+    sx = null;
+  }, { passive: true });
+})();
+
+// ---------- 토스트 ----------
+var toastTimer;
+function toast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2200);
+}
+
+// ---------- 카카오 지도 (JavaScript 키 입력 시 자동 활성화) ----------
+(function () {
+  var KAKAO_JS_KEY = ''; // 카카오 개발자 콘솔의 "JavaScript 키"를 여기에
+  if (!KAKAO_JS_KEY) return;
+  var s = document.createElement('script');
+  s.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=' + KAKAO_JS_KEY + '&libraries=services&autoload=false';
+  s.onload = function () {
+    kakao.maps.load(function () {
+      var el = document.getElementById('map');
+      el.hidden = false;
+      var geocoder = new kakao.maps.services.Geocoder();
+      geocoder.addressSearch('서울 서초구 법원로3길 6-9', function (res, status) {
+        if (status !== kakao.maps.services.Status.OK) { el.hidden = true; return; }
+        var pos = new kakao.maps.LatLng(res[0].y, res[0].x);
+        var map = new kakao.maps.Map(el, { center: pos, level: 4 });
+        new kakao.maps.Marker({ map: map, position: pos });
+        var label = new kakao.maps.CustomOverlay({
+          position: pos,
+          yAnchor: 2.6,
+          content: '<div style="background:#fff;border:1px solid #E7C6C0;border-radius:8px;padding:3px 10px;font-size:12px;box-shadow:0 2px 8px rgba(0,0,0,.12)">서라벌한정식 서초 본점</div>'
+        });
+        label.setMap(map);
+      });
+    });
+  };
+  document.head.appendChild(s);
+})();
+
+// ---------- 공유 ----------
+document.getElementById('share-btn').addEventListener('click', function () {
+  if (navigator.share) {
+    navigator.share({ title: '지호의 첫 생일에 초대합니다', url: location.href }).catch(function () {});
+  } else {
+    navigator.clipboard.writeText(location.href).then(function () { toast('초대장 주소를 복사했어요'); });
+  }
+});
+document.getElementById('copy-btn').addEventListener('click', function () {
+  navigator.clipboard.writeText(location.href).then(function () { toast('초대장 주소를 복사했어요'); });
+});
+
+// ---------- 스크롤 등장 ----------
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
